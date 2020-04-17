@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Chat App</title>
+	</head>
+	<body>
+		<div join-page class="join-page">
+		<div class="join-container">
+			<header class="join-header">
+				<h1><i class="fas fa-smile"></i> AnyChat</h1>
+			</header>
+			<main class="join-main">
+				<form id= "login-form"  action="chat.html" onsubmit="inform()">
+					<div class="form-control">
+						<label for="username">Username</label>
+						<input
+							type="text"
+							name="username"
+							id="username"
+							placeholder="Enter username..."
+							required
+						/>
+					</div>
+					<div class="form-control">
+						<label for="room">Room</label>
+						<!-- <select name="room" id="room">
+							<option value="PUBG">PUBG</option>
+							<option value="RainbowSix">RainbowSix</option>
+							<option value="CS Go">CS Go</option>
+							<option value="StudyRoom">Silence</option>
+							<option value="Cod">Cod</option>
+							<option value="WebProgramming">Coding</option>
+						</select> -->
+						<input 
+							type="text"
+							name = "room"
+							id = "room"
+							placeholder="Join a room or create ur own"
+							required
+						/>
+					</div>
+					<button type="submit" class="btn">Join Chat</button>
+				</form>
+				<div id="roomlist">
+					<h3>rooms in chatting...</h3>
+					<br><br>
+					<ul id = "rooms">
+					</ul>
+				</div>
+		
+			</main>
+		</div>
+	</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.3/qs.min.js" integrity="sha256-lSPkSu/D04IeqWOhTgTf5tLzNFEc37oNE9ysGS9PdK4=" crossorigin="anonymous"></script>
+		<script src="https://cdn.bootcss.com/jquery/3.4.1/core.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.3/qs.min.js" integrity="sha256-lSPkSu/D04IeqWOhTgTf5tLzNFEc37oNE9ysGS9PdK4=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js" integrity="sha256-bQmrZe4yPnQrLTY+1gYylfNMBuGfnT/HKsCGX+9Xuqo=" crossorigin="anonymous"></script>
+		<script src="js/welcome.js"></script>
+
+	</body>
+</html>
